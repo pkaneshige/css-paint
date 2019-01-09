@@ -3,6 +3,13 @@ html, body {
   margin: 0;
 }
 
+#error {
+  background: darkorange;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 1rem;
+}
+
 .wrapper {
   align-items: center;
   background: black;

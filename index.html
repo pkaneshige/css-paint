@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div id="error" style="display: none;">Sorry, your browser doesn't support the CSS Paint API. Try Chrome!</div>
     <div class="wrapper">
       <div id="paint"></div>
     </div>
     <script>
-      CSS.paintWorklet.addModule('paint.js');
+      // Make sure browser supports the Paint API
+      if ('paintWorklet' in CSS) {
+        CSS.paintWorklet.addModule('paint.js');
+      } else {
+        document.getElementById('error').style.display = 'block';
+      }
     </script>
   </body>
 </html>
