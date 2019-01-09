@@ -8,12 +8,22 @@
   </head>
   <body>
     <div class="wrapper">
-      <div id="paint"></div>
+      <div id="paint" class="checkerboard"></div>
+      <div id="buttons">
+        <button id="checkerboard" onclick="changePaint(this)">Checkerboard</button>
+        <button id="hudsonBay" onclick="changePaint(this)">Hudson Bay</button>
+        <button id="placeholder" onclick="changePaint(this)">Placeholder</button>
+      </div>
     </div>
     <!-- CSS Paint Polyfill -->
     <script src="//unpkg.com/css-paint-polyfill/dist/css-paint-polyfill.js"></script>
+    <!-- Add Paint -->
+    <script>CSS.paintWorklet.addModule('paint.js');</script>
+    <!-- Buttons -->
     <script>
-      CSS.paintWorklet.addModule('paint.js');
+      function changePaint(element) {
+        document.getElementById('paint').className = element.id;
+      }
     </script>
   </body>
 </html>

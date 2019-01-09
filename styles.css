@@ -3,24 +3,32 @@ html, body {
   margin: 0;
 }
 
-#error {
-  background: darkorange;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  padding: 1rem;
-}
-
 .wrapper {
   align-items: center;
   background: black;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
 }
 
 .wrapper #paint {
   height: 50%;
-  background-image: paint(checkerboard);
-  margin: auto;
   width: 50%;
+}
+
+.wrapper #paint.checkerboard {
+  background-image: paint(checkerboard);
+}
+
+.wrapper #paint.hudsonBay {
+  background-image: paint(hudsonBay);
+}
+
+.wrapper #paint.placeholder {
+  background-image: paint(placeholder);
+}
+
+.wrapper #buttons {
+  padding: 2rem;
 }
