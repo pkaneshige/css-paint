@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  align-items: center;
+  background: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.wrapper #paint {
+  height: 50%;
+  background-image: paint(checkerboard);
+  margin: auto;
+  width: 50%;
+}
